@@ -10,4 +10,8 @@
 
 @interface MackenzieViewController : UIViewController
 
+@property (weak,nonatomic) IBOutlet UIView * containerView;
+
+-(IBAction)editItem:(id)sender;
+
 @end
