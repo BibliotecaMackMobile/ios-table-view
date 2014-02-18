@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface MackenzieTableViewController : UITableViewController
+{
+    
+}
++(MackenzieTableViewController*)getinstancia;
+-(void)addNewItem:(NSString*) item withQtd:(NSString*)qtd;
 
 @end
