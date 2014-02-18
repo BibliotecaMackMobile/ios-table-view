@@ -10,18 +10,28 @@
 
 @implementation MackenzieTableViewController{
     int n;
+    NSMutableArray *itens;
+    MackenzieItensSingleton *lista;
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
-    n = 10;
+    lista = [MackenzieItensSingleton sharedItens];
+    itens = lista.itens;
+    n = itens.count;
     return [self init];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" ] ;
+    if(!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: @"Cell"];
+    }
+
     // Get the data from the database and fill the cell
-    NSString *row = [NSString stringWithFormat:@"%d",[indexPath row]];
+    //NSString *row = [NSString stringWithFormat:@"%d",[indexPath row]];
+    NSString *row = [itens objectAtIndex:[indexPath row]]; // colocar os itens do NSMutableArray
     [[cell textLabel] setText:row];
     [[cell detailTextLabel] setText:@"Detail"];
     return cell;
@@ -39,6 +49,7 @@
     {
         // codigo de remocao do item que esta na posicao [indexPath row] no backend
         // e remocao no front-end
+        [lista removeObjeto:[indexPath row]];
         n = n -1;
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         

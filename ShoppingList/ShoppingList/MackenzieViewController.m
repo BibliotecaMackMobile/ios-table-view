@@ -20,13 +20,14 @@
 - (IBAction)edit:(id)sender {
     childViewController = (MackenzieTableViewController *) self.childViewControllers.lastObject;
     [childViewController setEditing:YES animated:YES];
+    
+    
 }
 
 - (IBAction)ver:(id)sender {
     childViewController = (MackenzieTableViewController *) self.childViewControllers.lastObject;
     [childViewController setEditing:NO animated:YES];
 }
-
 
 - (void)viewDidLoad
 {
