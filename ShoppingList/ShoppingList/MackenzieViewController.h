@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SingleTonTon.h"
+#import "InsereViewController.h"
 
 @interface MackenzieViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *text;
+
 
 @end

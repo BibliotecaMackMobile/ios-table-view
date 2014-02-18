@@ -17,6 +17,7 @@
 
 @implementation MackenzieViewController
 
+
 - (IBAction)edit:(id)sender {
     childViewController = (MackenzieTableViewController *) self.childViewControllers.lastObject;
     [childViewController setEditing:YES animated:YES];
@@ -39,9 +40,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 
 
 @end
