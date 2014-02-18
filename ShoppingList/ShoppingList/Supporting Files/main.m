@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "MackenzieAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([MackenzieAppDelegate class]));
+    @autoreleasepool
+    {
+        return UIApplicationMain(argc,argv,nil,NSStringFromClass([MackenzieAppDelegate class]));
     }
 }
