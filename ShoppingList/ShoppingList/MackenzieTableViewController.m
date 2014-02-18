@@ -7,22 +7,30 @@
 //
 
 #import "MackenzieTableViewController.h"
+#import "ListaProdutos.h"
 
 @implementation MackenzieTableViewController{
+    ListaProdutos *lista;
     int n;
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
-    n = 10;
+    lista = [ListaProdutos sharedInstance];
+    n = [lista qtd];
     return [self init];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    //UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     // Get the data from the database and fill the cell
+    NSLog(@"%d", [indexPath row]);
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" ] ;
+    if (! cell ) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell" ] ;
+    }
     NSString *row = [NSString stringWithFormat:@"%d",[indexPath row]];
-    [[cell textLabel] setText:row];
+    [[cell textLabel] setText:[[lista produtos] objectAtIndex:[indexPath row]]];
     [[cell detailTextLabel] setText:@"Detail"];
     return cell;
 }
@@ -41,7 +49,6 @@
         // e remocao no front-end
         n = n -1;
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        
     }
 }
 
