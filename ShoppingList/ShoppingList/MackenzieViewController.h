@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MackenzieViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *botNovo;
+
+-(void)addlist: (NSString*)lista withQtd:(NSString*)qtd;
+@property (weak, nonatomic) IBOutlet UIView *conteiner;
 
 @end
