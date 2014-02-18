@@ -8,6 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MackenzieTableViewController : UITableViewController
-
+@interface MackenzieTableViewController : UITableViewController <UITableViewDataSource>
 @end

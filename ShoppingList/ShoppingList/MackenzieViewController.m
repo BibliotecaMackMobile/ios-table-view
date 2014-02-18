@@ -8,6 +8,8 @@
 
 #import "MackenzieViewController.h"
 #import "MackenzieTableViewController.h"
+#import "MackenzieAdicionarViewController.h"
+
 
 @interface MackenzieViewController () {
     MackenzieTableViewController * childViewController;
@@ -17,16 +19,17 @@
 
 @implementation MackenzieViewController
 
-- (IBAction)edit:(id)sender {
+- (IBAction)edit:(id)sender
+{
     childViewController = (MackenzieTableViewController *) self.childViewControllers.lastObject;
     [childViewController setEditing:YES animated:YES];
 }
 
-- (IBAction)ver:(id)sender {
+- (IBAction)ver:(id)sender
+{
     childViewController = (MackenzieTableViewController *) self.childViewControllers.lastObject;
     [childViewController setEditing:NO animated:YES];
 }
-
 
 - (void)viewDidLoad
 {
@@ -40,8 +43,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-
+- (IBAction)adicionaFinalizado:(UIStoryboardSegue *)segue
+{
+    childViewController = (MackenzieTableViewController *) self.childViewControllers.lastObject;
+    MackenzieLista *lista = [MackenzieLista getInstance];
+    
+    NSArray *paths = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:[lista.itemList count] - 1 inSection:0]];
+    
+    [childViewController.tableView insertRowsAtIndexPaths:paths withRowAnimation:YES];
+}
 
 @end
