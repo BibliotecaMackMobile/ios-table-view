@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "StoreItems.h"
+#import "MackenzieTableViewController.h"
 
-@interface AddItemViewController : UIViewController <UITextFieldDelegate>
+@interface AddItemViewController : UIViewController <UITextFieldDelegate,UIImagePickerControllerDelegate>
 {
     StoreItems * storeItems;
+    UIImagePickerController * imagePicker;
 }
 
 @property (nonatomic,weak) IBOutlet UIImageView * itemImageView;

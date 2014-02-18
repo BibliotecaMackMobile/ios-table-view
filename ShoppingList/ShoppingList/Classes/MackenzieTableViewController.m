@@ -10,6 +10,8 @@
 
 @interface MackenzieTableViewController()
 
+-(void)refreshTable:(NSNotification *)sender;
+
 @end
 
 @implementation MackenzieTableViewController
@@ -29,6 +31,7 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshTable:) name:@"reloadTableNotificarion" object:nil];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 }
@@ -62,6 +65,8 @@
     if(cell == nil)
         cell = [[[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil] objectAtIndex:0];
     cell.itemNameLabel.text = [[[storeItems items] objectAtIndex:indexPath.row] itemName];
+    cell.itemDescriptionLabel.text = [[[storeItems items] objectAtIndex:indexPath.row] itemDescription];
+    cell.itemImageView.image = [[[storeItems items] objectAtIndex:indexPath.row] itemImage];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
@@ -70,7 +75,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    //
 }
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -80,6 +85,13 @@
         [[storeItems items] removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
+}
+
+#pragma mark - NSNotificationCenter
+
+-(void)refreshTable:(NSNotification *)sender
+{
+    [self.tableView reloadData];
 }
 
 @end
