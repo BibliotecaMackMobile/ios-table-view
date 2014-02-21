@@ -8,17 +8,18 @@
 
 #import "MackenzieTableViewController.h"
 #import "Produto.h"
+#import "MyCustonCell.h"
+#import "Armazem.h"
 
 @implementation MackenzieTableViewController{
     int n;
     int s;
 }
 
-@synthesize singleton;
+@synthesize armazem,produto;
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
-    int num = 0;
-    singleton = [Singleton getInstancia];
+    armazem = [Armazem getInstancia];
     return [self init];
 }
 
@@ -27,13 +28,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    Produto *p = [singleton.produtos objectAtIndex:[indexPath row]];
-    NSString *row = [NSString stringWithFormat:@"%d",[singleton.produtos count]];
-    [[cell textLabel] setText:row];
-    [[cell detailTextLabel] setText:@"Detail"];
-    if([indexPath row]%2 == 0) cell.backgroundColor = [UIColor redColor];
-    else cell.backgroundColor = [UIColor blueColor];
+    MyCustonCell *cell = [[MyCustonCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    produto = [armazem.conteudo objectAtIndex:indexPath.row];
+    cell.labelNomeProduto.text = produto.nome;
+    cell.labelQuantidadeProduto.text = produto.quant;
     return cell;
 }
 
@@ -43,7 +41,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [singleton.produtos count];
+    return armazem.conteudo.count;
 }
 
 -(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -53,7 +51,8 @@
     {
         // codigo de remocao do item que esta na posicao [indexPath row] no backend
         // e remocao no front-end
-        n = n -1;
+        armazem = [Armazem getInstancia];
+        [armazem.conteudo removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         
     }

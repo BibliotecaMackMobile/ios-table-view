@@ -7,15 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Singleton.h"
+#import "Armazem.h"
 
 @class Produto;
 
 @interface CadastraCellViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *textoNome;
-@property (weak, nonatomic) IBOutlet UITextField *textoQuantidade;
-@property (strong,nonatomic) Singleton *singeton;
+- (IBAction)stepperQuantidade:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *labelQuantidade;
 @property (strong, nonatomic) Produto *novo;
+@property (strong,nonatomic) Armazem *armazem;
 
 - (IBAction)botaoAdicionar:(id)sender;
 

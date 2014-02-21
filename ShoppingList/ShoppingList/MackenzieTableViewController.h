@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Singleton.h"
+#import "Armazem.h"
 @class Produto;
 
 @interface MackenzieTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
 
-@property Singleton *singleton;
-
--(void)insertCell:(Produto*)p;
+@property(strong,nonatomic) Armazem *armazem;
+@property(strong,nonatomic) Produto *produto;
 
 @end

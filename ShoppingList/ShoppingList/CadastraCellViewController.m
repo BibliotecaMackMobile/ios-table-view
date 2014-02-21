@@ -15,14 +15,14 @@
 @end
 
 @implementation CadastraCellViewController
-@synthesize singeton,textoNome,textoQuantidade, novo;
+@synthesize textoNome,novo,labelQuantidade,armazem;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    singeton = [Singleton getInstancia];
     if (self) {
         // Custom initialization
+        armazem = [Armazem getInstancia];
     }
     return self;
 }
@@ -40,8 +40,15 @@
 }
 
 - (IBAction)botaoAdicionar:(id)sender {
+    armazem = [Armazem getInstancia];
     novo = [[Produto alloc] init];
     novo.nome = [textoNome text];
-    novo.quant = [textoQuantidade text];
+    novo.quant = [labelQuantidade text];
+    [armazem.conteudo insertObject:novo atIndex:armazem.q];
+    [armazem setQ:armazem.q+1];
+    NSLog(@"%d",armazem.conteudo.count);
+}
+- (IBAction)stepperQuantidade:(UIStepper*)sender {
+    labelQuantidade.text = [NSString stringWithFormat:@"%.0f",sender.value];
 }
 @end

@@ -10,11 +10,19 @@
 
 @implementation MyCustonCell
 
+@synthesize labelNomeProduto,labelQuantidadeProduto;
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        labelNomeProduto = [[UILabel alloc] initWithFrame:CGRectMake(45, 10, 200, 30)];
+        labelQuantidadeProduto = [[UILabel alloc] initWithFrame:CGRectMake(200, 10, 100, 30)];
+        labelNomeProduto.font = [UIFont fontWithName:@"Arial" size:16.0f];
+        labelQuantidadeProduto.font = [UIFont fontWithName:@"Arial" size:16.0f];
+        
+        [self addSubview:labelNomeProduto];
+        [self addSubview:labelQuantidadeProduto];
     }
     return self;
 }
@@ -27,3 +35,4 @@
 }
 
 @end
+

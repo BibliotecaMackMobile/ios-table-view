@@ -10,4 +10,7 @@
 
 @interface MyCustonCell : UITableViewCell
 
+@property (strong,nonatomic) UILabel *labelNomeProduto;
+@property (strong,nonatomic) UILabel *labelQuantidadeProduto;
+
 @end

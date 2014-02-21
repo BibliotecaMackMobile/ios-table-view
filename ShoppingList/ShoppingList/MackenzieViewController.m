@@ -51,7 +51,7 @@
     if ([identifier compare:@"novoRegistroSegue"] == NSOrderedSame) {
         childViewController = (MackenzieTableViewController *) self.childViewControllers.lastObject;
         Produto *novo = [(CadastraCellViewController*)sender novo];
-        [childViewController  insertCell:novo];
+        
     }
 }
 
