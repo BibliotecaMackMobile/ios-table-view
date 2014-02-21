@@ -22,6 +22,11 @@
 		27137D0218AB8303001BE8BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27137D0018AB8303001BE8BE /* InfoPlist.strings */; };
 		27137D0418AB8303001BE8BE /* ShoppingListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27137D0318AB8303001BE8BE /* ShoppingListTests.m */; };
 		27137D0F18AB9766001BE8BE /* MackenzieTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27137D0E18AB9766001BE8BE /* MackenzieTableViewController.m */; };
+		B511344518B76E1400E68994 /* ShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = B511344418B76E1400E68994 /* ShoppingList.m */; };
+		B511344818B76E8000E68994 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = B511344718B76E8000E68994 /* Product.m */; };
+		B58E61B018B3A48900C6733C /* CadastrarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B58E61AF18B3A48900C6733C /* CadastrarTableViewController.m */; };
+		B5EED5C218B380F2003C5C06 /* flappy-600x229.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5EED5C118B380F2003C5C06 /* flappy-600x229.jpg */; };
+		B5EED5C518B38498003C5C06 /* CustomizedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EED5C418B38498003C5C06 /* CustomizedCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,15 @@
 		27137D0318AB8303001BE8BE /* ShoppingListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingListTests.m; sourceTree = "<group>"; };
 		27137D0D18AB9766001BE8BE /* MackenzieTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MackenzieTableViewController.h; sourceTree = "<group>"; };
 		27137D0E18AB9766001BE8BE /* MackenzieTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MackenzieTableViewController.m; sourceTree = "<group>"; };
+		B511344318B76E1400E68994 /* ShoppingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingList.h; sourceTree = "<group>"; };
+		B511344418B76E1400E68994 /* ShoppingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingList.m; sourceTree = "<group>"; };
+		B511344618B76E8000E68994 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		B511344718B76E8000E68994 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		B58E61AE18B3A48900C6733C /* CadastrarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CadastrarTableViewController.h; sourceTree = "<group>"; };
+		B58E61AF18B3A48900C6733C /* CadastrarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CadastrarTableViewController.m; sourceTree = "<group>"; };
+		B5EED5C118B380F2003C5C06 /* flappy-600x229.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "flappy-600x229.jpg"; sourceTree = "<group>"; };
+		B5EED5C318B38498003C5C06 /* CustomizedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomizedCell.h; sourceTree = "<group>"; };
+		B5EED5C418B38498003C5C06 /* CustomizedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomizedCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,10 +134,19 @@
 				27137CE718AB8303001BE8BE /* MackenzieAppDelegate.h */,
 				27137CE818AB8303001BE8BE /* MackenzieAppDelegate.m */,
 				27137CEA18AB8303001BE8BE /* Main.storyboard */,
+				B5EED5C118B380F2003C5C06 /* flappy-600x229.jpg */,
 				27137CED18AB8303001BE8BE /* MackenzieViewController.h */,
 				27137CEE18AB8303001BE8BE /* MackenzieViewController.m */,
 				27137CF018AB8303001BE8BE /* Images.xcassets */,
 				27137CDF18AB8303001BE8BE /* Supporting Files */,
+				B5EED5C318B38498003C5C06 /* CustomizedCell.h */,
+				B5EED5C418B38498003C5C06 /* CustomizedCell.m */,
+				B58E61AE18B3A48900C6733C /* CadastrarTableViewController.h */,
+				B58E61AF18B3A48900C6733C /* CadastrarTableViewController.m */,
+				B511344318B76E1400E68994 /* ShoppingList.h */,
+				B511344418B76E1400E68994 /* ShoppingList.m */,
+				B511344618B76E8000E68994 /* Product.h */,
+				B511344718B76E8000E68994 /* Product.m */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
@@ -235,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27137CF118AB8303001BE8BE /* Images.xcassets in Resources */,
+				B5EED5C218B380F2003C5C06 /* flappy-600x229.jpg in Resources */,
 				27137CE318AB8303001BE8BE /* InfoPlist.strings in Resources */,
 				27137CEC18AB8303001BE8BE /* Main.storyboard in Resources */,
 			);
@@ -255,9 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5EED5C518B38498003C5C06 /* CustomizedCell.m in Sources */,
+				B511344818B76E8000E68994 /* Product.m in Sources */,
 				27137CE918AB8303001BE8BE /* MackenzieAppDelegate.m in Sources */,
 				27137CEF18AB8303001BE8BE /* MackenzieViewController.m in Sources */,
+				B58E61B018B3A48900C6733C /* CadastrarTableViewController.m in Sources */,
 				27137CE518AB8303001BE8BE /* main.m in Sources */,
+				B511344518B76E1400E68994 /* ShoppingList.m in Sources */,
 				27137D0F18AB9766001BE8BE /* MackenzieTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +495,7 @@
 				27137D0918AB8303001BE8BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27137D0A18AB8303001BE8BE /* Build configuration list for PBXNativeTarget "ShoppingListTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +504,7 @@
 				27137D0C18AB8303001BE8BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
