@@ -31,6 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //dados = [[NSMutableArray alloc]initWithObjects: @"bolacha", @"detergente",nil];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
