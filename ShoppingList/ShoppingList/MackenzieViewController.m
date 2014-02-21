@@ -53,6 +53,10 @@
     [a setThumbnails:[NSMutableArray arrayWithObjects:@"ovo.jpg", @"mushroom_risotto.jpg", @"full_breakfast.jpg", @"hamburger.jpg", @"ham_and_egg_sandwich.jpg", @"creme.jpg", @"white_chocolate_donut.jpg", @"starbucks_coffee.jpg", @"vegetable_curry.jpg", @"instant_noodle_with_egg.jpg", @"noodle_with_bbq_pork.jpg", @"japanese_noodle_with_pork.jpg", @"green_tea.jpg", @"thai_shrimp_cake.jpg", @"angry_birds_cake.jpg", @"ham_and_cheese_panini.jpg", nil]];
     
     [a setQuantidade:[NSMutableArray arrayWithObjects:@"1", @"2", @"2",@"2",@"2",@"2",@"2",@"2",@"2",@"2",@"2",nil]];
+    
+    
+    
+    
 }
 
 
@@ -64,13 +68,14 @@
 
 - (IBAction)rmvBtnclicked:(id)sender {
     
-    MackenzieSingleton *b = [[MackenzieSingleton alloc]init];
-    b = [MackenzieSingleton getInstancia];
-
+    MackenzieSingleton *b = [MackenzieSingleton getInstancia];
     [b.itens addObject:textField1.text];
-    unsigned long int lastRow =[b.itens count];
+
+    unsigned long int lastRow =[b.itens count] - 1;
     NSIndexPath *posicao = [NSIndexPath indexPathForRow:lastRow inSection:0];
-    [self.childViewControllers.lastObject insertRowsAtIndexPaths:[NSMutableArray arrayWithObject:posicao] withRowAnimation:UITableViewRowAnimationFade];
+
+    MackenzieTableViewController *mtv = (MackenzieTableViewController*)self.childViewControllers.lastObject;
+    [mtv.tableView insertRowsAtIndexPaths:[NSMutableArray arrayWithObject:posicao] withRowAnimation:UITableViewRowAnimationFade];
     
 }
 

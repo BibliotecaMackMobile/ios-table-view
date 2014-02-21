@@ -11,12 +11,10 @@
 #import "SimpleTableCell.h"
 
 @implementation MackenzieTableViewController{
-    int n;
     MackenzieSingleton *var;
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
-    n = 16;
     var = [MackenzieSingleton getInstancia];
     return [self init];
 }
@@ -34,8 +32,6 @@
 // METODO QUE CRIA CADA CELULA EM DETERMINADA SECAO
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *simpleTableIdentifier = @"SimpleTableCell";
-    
     SimpleTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     if(!cell){
         cell = [[SimpleTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
@@ -44,7 +40,7 @@
     [[cell textLabel] setText:[var.itens objectAtIndex:indexPath.row]];
     //cell.thumbnailImageView.image = [UIImage imageNamed:[thumbnails objectAtIndex:indexPath.row]];
     cell.imageView.image = [UIImage imageNamed:[var.thumbnails objectAtIndex:indexPath.row]];
-    cell.quantLabel.text = [var.quantidade objectAtIndex:indexPath.row];
+    cell.detailTextLabel.text = [var.quantidade objectAtIndex:indexPath.row];
 
     [[cell detailTextLabel] setText:@"Detail"];
     
@@ -53,15 +49,9 @@
 
 // METODO QUE DEFINE A QUANTIDADE DE CELULAS PARA CADA SECAO
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //return var.itens.count;
-    return n;
+    return var.itens.count;
 }
 
-// METODO QUE DEFINE A QUANTIDADE DE SECOES DA UITABLEVIEW
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
 
 #pragma mark - UITableView Delegate
 
@@ -72,21 +62,21 @@
 
 -(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Editing %d",n);
     if(editingStyle == UITableViewCellEditingStyleDelete)
     {
         // codigo de remocao do item que esta na posicao [indexPath row] no backend
         // e remocao no front-end
-        n = n - 1;
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         [var.itens removeObjectAtIndex:(indexPath.row)];
     }
 }
 
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 78;
 }
+
 
 
 @end

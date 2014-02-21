@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MackenzieTableViewController.h"
 
-@interface MackenzieViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+@interface MackenzieViewController : UIViewController<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *removBtn;
 - (IBAction)rmvBtnclicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *textField1;
