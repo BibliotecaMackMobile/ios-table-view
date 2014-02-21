@@ -8,6 +8,7 @@
 
 #import "MackenzieViewController.h"
 #import "MackenzieTableViewController.h"
+#import "MackenzieAddViewController.h"
 
 @interface MackenzieViewController () {
     MackenzieTableViewController * childViewController;
@@ -16,6 +17,14 @@
 @end
 
 @implementation MackenzieViewController
+
+@synthesize barUtilidades, barItemNovo;
+
+- (IBAction)efeitoBarItemNovo:(id)sender {
+    MackenzieAddViewController *telaAdd = [[MackenzieAddViewController alloc] init];
+    [self presentViewController:telaAdd animated:NO completion:nil];
+}
+
 
 - (IBAction)edit:(id)sender {
     childViewController = (MackenzieTableViewController *) self.childViewControllers.lastObject;
@@ -26,7 +35,6 @@
     childViewController = (MackenzieTableViewController *) self.childViewControllers.lastObject;
     [childViewController setEditing:NO animated:YES];
 }
-
 
 - (void)viewDidLoad
 {
@@ -39,9 +47,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
-
 
 @end

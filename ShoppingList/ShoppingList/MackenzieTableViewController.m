@@ -8,45 +8,50 @@
 
 #import "MackenzieTableViewController.h"
 
-@implementation MackenzieTableViewController{
-    int n;
-}
+@implementation MackenzieTableViewController
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
-    n = 10;
     return [self init];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    
     // Get the data from the database and fill the cell
-    NSString *row = [NSString stringWithFormat:@"%d",[indexPath row]];
-    [[cell textLabel] setText:row];
+    NSString *produto = [[[MackenzieSingletonItem sharadeManager] itensListaDeCompras] objectAtIndex:[indexPath row]];
+    [[cell textLabel] setText:produto];
     [[cell detailTextLabel] setText:@"Detail"];
     return cell;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return n;
+    return [[[MackenzieSingletonItem sharadeManager] itensListaDeCompras] count];
 }
 
 -(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Editing %d",n);
+    NSLog(@"Editing %d",[[[MackenzieSingletonItem sharadeManager] itensListaDeCompras] count]);
     if(editingStyle == UITableViewCellEditingStyleDelete)
     {
         // codigo de remocao do item que esta na posicao [indexPath row] no backend
         // e remocao no front-end
-        n = n -1;
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        // Deleta o item da listaDeCompras
+        NSString *removerItem = [[[MackenzieSingletonItem sharadeManager] itensListaDeCompras] objectAtIndex:[indexPath row]];
+        [[MackenzieSingletonItem sharadeManager] removerItemNaListaDeCompras:removerItem];
+        
+        // Deve deletar e depois criar o realese
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         
     }
 }
-
-
-
 
 
 

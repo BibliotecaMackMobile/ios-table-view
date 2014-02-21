@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MackenzieSingletonItem.h"
 
 @interface MackenzieTableViewController : UITableViewController
 
