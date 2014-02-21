@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xzt-rt-Vgz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3017" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xzt-rt-Vgz">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -38,7 +38,11 @@
                                             <action selector="ver:" destination="Xzt-rt-Vgz" id="Mqx-mK-DoM"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Novo" id="7gi-TO-NOc"/>
+                                    <barButtonItem title="Novo" id="7gi-TO-NOc">
+                                        <connections>
+                                            <segue destination="AOQ-ai-FmY" kind="modal" id="Plc-VF-ey5"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -95,6 +99,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1PY-Df-B91" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-491" y="-649"/>
+        </scene>
+        <!--Mackenzie Add View Controller-->
+        <scene sceneID="T72-0a-6UC">
+            <objects>
+                <viewController id="AOQ-ai-FmY" customClass="MackenzieAddViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gJq-dh-47d"/>
+                        <viewControllerLayoutGuide type="bottom" id="gE5-uL-lMj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dp7-pM-OIP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="md4-yy-bOt">
+                                <rect key="frame" x="139" y="195" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Enviar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enviardados:" destination="AOQ-ai-FmY" eventType="touchUpInside" id="gqh-xf-H1m"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhW-w6-da1">
+                                <rect key="frame" x="75" y="147" width="171" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnenviar" destination="md4-yy-bOt" id="3aN-2J-3KM"/>
+                        <outlet property="texto" destination="BhW-w6-da1" id="8Bl-CW-lXx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdQ-aB-xuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34" y="-696"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

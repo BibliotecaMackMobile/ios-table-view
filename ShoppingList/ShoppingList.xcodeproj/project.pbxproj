@@ -22,6 +22,8 @@
 		27137D0218AB8303001BE8BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27137D0018AB8303001BE8BE /* InfoPlist.strings */; };
 		27137D0418AB8303001BE8BE /* ShoppingListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27137D0318AB8303001BE8BE /* ShoppingListTests.m */; };
 		27137D0F18AB9766001BE8BE /* MackenzieTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27137D0E18AB9766001BE8BE /* MackenzieTableViewController.m */; };
+		6608719D18B38CF90082761F /* MackenzieLista.m in Sources */ = {isa = PBXBuildFile; fileRef = 6608719C18B38CF90082761F /* MackenzieLista.m */; };
+		660871A318B3A5890082761F /* MackenzieAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 660871A218B3A5890082761F /* MackenzieAddViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		27137D0318AB8303001BE8BE /* ShoppingListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingListTests.m; sourceTree = "<group>"; };
 		27137D0D18AB9766001BE8BE /* MackenzieTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MackenzieTableViewController.h; sourceTree = "<group>"; };
 		27137D0E18AB9766001BE8BE /* MackenzieTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MackenzieTableViewController.m; sourceTree = "<group>"; };
+		6608719B18B38CF90082761F /* MackenzieLista.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MackenzieLista.h; sourceTree = "<group>"; };
+		6608719C18B38CF90082761F /* MackenzieLista.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MackenzieLista.m; sourceTree = "<group>"; };
+		660871A118B3A5890082761F /* MackenzieAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MackenzieAddViewController.h; sourceTree = "<group>"; };
+		660871A218B3A5890082761F /* MackenzieAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MackenzieAddViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,10 @@
 				27137CEE18AB8303001BE8BE /* MackenzieViewController.m */,
 				27137CF018AB8303001BE8BE /* Images.xcassets */,
 				27137CDF18AB8303001BE8BE /* Supporting Files */,
+				6608719B18B38CF90082761F /* MackenzieLista.h */,
+				6608719C18B38CF90082761F /* MackenzieLista.m */,
+				660871A118B3A5890082761F /* MackenzieAddViewController.h */,
+				660871A218B3A5890082761F /* MackenzieAddViewController.m */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
@@ -258,6 +268,8 @@
 				27137CE918AB8303001BE8BE /* MackenzieAppDelegate.m in Sources */,
 				27137CEF18AB8303001BE8BE /* MackenzieViewController.m in Sources */,
 				27137CE518AB8303001BE8BE /* main.m in Sources */,
+				6608719D18B38CF90082761F /* MackenzieLista.m in Sources */,
+				660871A318B3A5890082761F /* MackenzieAddViewController.m in Sources */,
 				27137D0F18AB9766001BE8BE /* MackenzieTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +479,7 @@
 				27137D0918AB8303001BE8BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27137D0A18AB8303001BE8BE /* Build configuration list for PBXNativeTarget "ShoppingListTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +488,7 @@
 				27137D0C18AB8303001BE8BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
