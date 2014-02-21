@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MackenzieLojaStore.h"
 
-@interface MackenzieTableViewController : UITableViewController
+
+@interface MackenzieTableViewController : UITableViewController {
+    MackenzieLojaStore *list;
+}
+ 
 
 @end
