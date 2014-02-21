@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xzt-rt-Vgz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3017" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="5hN-Hu-PfJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
+        <!--Edition View Controller-->
+        <scene sceneID="K1i-NK-2aD">
+            <objects>
+                <viewController id="CTX-6g-8ZF" customClass="EditionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IK1-YL-VsK"/>
+                        <viewControllerLayoutGuide type="bottom" id="JWz-mu-E10"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fVU-W3-kdd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lkV-CI-gVX">
+                                <rect key="frame" x="63" y="117" width="183" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Digite aqui o produto que deseja adicionar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfA-Nv-Xi5">
+                                <rect key="frame" x="20" y="81" width="326" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vWF-5E-SUG">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ega-eV-wZC">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4IV-6P-7l2">
+                                <rect key="frame" x="272" y="7" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="CTX-6g-8ZF" eventType="touchUpInside" id="N4L-OC-0Ql"/>
+                                    <segue destination="ZW6-SI-teQ" kind="unwind" unwindAction="unwindToMackenzieViewController:" id="KOX-aB-DUA"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="lkV-CI-gVX" id="V1u-sS-gMt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pb9-cf-KFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ZW6-SI-teQ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1340" y="31"/>
+        </scene>
         <!--Mackenzie View Controller-->
         <scene sceneID="2h8-Yl-xQF">
             <objects>
@@ -38,12 +90,17 @@
                                             <action selector="ver:" destination="Xzt-rt-Vgz" id="Mqx-mK-DoM"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Novo" id="7gi-TO-NOc"/>
+                                    <barButtonItem title="Novo" id="7gi-TO-NOc">
+                                        <connections>
+                                            <segue destination="CTX-6g-8ZF" kind="push" id="aVB-m5-oXe"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="T4u-GY-ae4"/>
                     <connections>
                         <outlet property="tvc" destination="aFS-Wy-fkf" id="fPE-iW-99n"/>
                     </connections>
@@ -51,6 +108,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2qc-HX-xeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1003" y="-696"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Dl-wW-EiH">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="5hN-Hu-PfJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vku-hU-s7Q">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Xzt-rt-Vgz" kind="relationship" relationship="rootViewController" id="CiF-5W-sOW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ytO-rV-Zl3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1408" y="-759"/>
         </scene>
         <!--Mackenzie Table View Controller-->
         <scene sceneID="EzA-bn-OSS">
