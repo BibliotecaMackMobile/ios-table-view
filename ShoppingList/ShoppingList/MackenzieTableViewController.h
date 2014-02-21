@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddViewController.h"
 
-@interface MackenzieTableViewController : UITableViewController
+@interface MackenzieTableViewController : UITableViewController  <ReloadItemsDelegate>
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

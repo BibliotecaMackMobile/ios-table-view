@@ -12,6 +12,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if(![defaults objectForKey:@"items"])
+    {
+        NSMutableArray *items = [[NSMutableArray alloc]init];
+        [defaults setObject:items forKey:@"items"];
+    }
+    
     // Override point for customization after application launch.
     return YES;
 }

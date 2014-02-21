@@ -8,7 +8,7 @@
 
 #import "MackenzieViewController.h"
 #import "MackenzieTableViewController.h"
-
+#import "AddViewController.h"
 @interface MackenzieViewController () {
     MackenzieTableViewController * childViewController;
 }
@@ -19,6 +19,9 @@
 
 - (IBAction)edit:(id)sender {
     childViewController = (MackenzieTableViewController *) self.childViewControllers.lastObject;
+    if(childViewController.isEditing)
+    [childViewController setEditing:NO animated:YES];
+       else
     [childViewController setEditing:YES animated:YES];
 }
 
@@ -33,6 +36,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+- (IBAction)add:(id)sender {
+    
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -42,6 +48,14 @@
 
 
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"add"]) {
+        
+        AddViewController *controller = (AddViewController *)segue.destinationViewController;
+        controller.delegate = (MackenzieTableViewController *) self.childViewControllers.lastObject;
+    }
+}
 
 
 @end

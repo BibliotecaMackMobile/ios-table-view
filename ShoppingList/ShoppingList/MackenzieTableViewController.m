@@ -7,6 +7,8 @@
 //
 
 #import "MackenzieTableViewController.h"
+#import "Item.h"
+#import "MackenzieSingleton.h"
 
 @implementation MackenzieTableViewController{
     int n;
@@ -19,17 +21,24 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    MackenzieSingleton *single = [MackenzieSingleton sharedInstance];
+
+    
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
     // Get the data from the database and fill the cell
+    Item *currentItem = [[single getall] objectAtIndex:indexPath.row];
+    NSLog(@"%@", currentItem.Product);
     NSString *row = [NSString stringWithFormat:@"%d",[indexPath row]];
-    [[cell textLabel] setText:row];
-    [[cell detailTextLabel] setText:@"Detail"];
+    cell.textLabel.text = currentItem.Product;
+    cell.detailTextLabel.text = currentItem.Descritpion;
+
     return cell;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return n;
+    MackenzieSingleton *single = [MackenzieSingleton sharedInstance];
+   return [[single getall] count];
 }
 
 -(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -45,6 +54,9 @@
     }
 }
 
+-(void)refreshTable {
+    [self.tableView reloadData];
+}
 
 
 
