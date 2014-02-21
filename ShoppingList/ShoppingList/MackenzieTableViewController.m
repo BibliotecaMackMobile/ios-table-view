@@ -34,7 +34,7 @@
     
     SimpleTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     if(!cell){
-        cell = [[SimpleTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell = [[SimpleTableCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
     }// Get the data from the database and fill the cell
     
     [[cell textLabel] setText:[var.itens objectAtIndex:indexPath.row]];
@@ -42,7 +42,6 @@
     cell.imageView.image = [UIImage imageNamed:[var.thumbnails objectAtIndex:indexPath.row]];
     cell.detailTextLabel.text = [var.quantidade objectAtIndex:indexPath.row];
 
-    [[cell detailTextLabel] setText:@"Detail"];
     
     return cell;
 }
