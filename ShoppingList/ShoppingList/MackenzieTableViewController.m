@@ -7,47 +7,43 @@
 //
 
 #import "MackenzieTableViewController.h"
+#import "MackenzieViewController.h"
+#import "impSingleton.h"
 
-@implementation MackenzieTableViewController{
-    int n;
-}
-
--(id)initWithCoder:(NSCoder *)aDecoder {
-    n = 10;
-    return [self init];
-}
-
+@implementation MackenzieTableViewController
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    // Get the data from the database and fill the cell
-    NSString *row = [NSString stringWithFormat:@"%d",[indexPath row]];
-    [[cell textLabel] setText:row];
-    [[cell detailTextLabel] setText:@"Detail"];
+    impSingleton *it = [impSingleton getInstancia];
+
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:
+                UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+    }
+    cell.textLabel.text = [it.dados objectAtIndex:indexPath.row];//[lista objectAtIndex:indexPath.row];
+    return cell;
+    
     return cell;
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return n;
+    impSingleton *it = [impSingleton getInstancia];
+    return [it.dados count];
 }
 
 -(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Editing %d",n);
+    impSingleton *it = [impSingleton getInstancia];
     if(editingStyle == UITableViewCellEditingStyleDelete)
     {
         // codigo de remocao do item que esta na posicao [indexPath row] no backend
         // e remocao no front-end
-        n = n -1;
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        
+        //n = n -1;
+        [it.dados removeObject:indexPath];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
     }
 }
-
-
-
-
-
 
 @end

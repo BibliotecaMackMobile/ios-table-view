@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MackenzieViewController : UIViewController
+@interface MackenzieViewController : UIViewController{
+    NSMutableArray *dados;
+}
 
 @end
