@@ -10,4 +10,9 @@
 
 @interface MackenzieViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barUtilidades;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barItemNovo;
+
+- (IBAction)efeitoBarItemNovo:(id)sender;
 @end
