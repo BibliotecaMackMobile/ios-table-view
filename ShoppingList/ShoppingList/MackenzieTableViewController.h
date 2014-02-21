@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Singleton.h"
+@class Produto;
 
-@interface MackenzieTableViewController : UITableViewController
+@interface MackenzieTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
+
+@property Singleton *singleton;
+
+-(void)insertCell:(Produto*)p;
 
 @end

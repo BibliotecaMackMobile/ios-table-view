@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MackenzieViewController : UIViewController
+- (IBAction)novo:(id)sender;
 
 @end

@@ -7,29 +7,43 @@
 //
 
 #import "MackenzieTableViewController.h"
+#import "Produto.h"
 
 @implementation MackenzieTableViewController{
     int n;
+    int s;
 }
 
+@synthesize singleton;
+
 -(id)initWithCoder:(NSCoder *)aDecoder {
-    n = 10;
+    int num = 0;
+    singleton = [Singleton getInstancia];
     return [self init];
 }
 
+-(void)insertCell:(Produto*)p{
+    NSLog(@"Celula inserida.");
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    // Get the data from the database and fill the cell
-    NSString *row = [NSString stringWithFormat:@"%d",[indexPath row]];
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    Produto *p = [singleton.produtos objectAtIndex:[indexPath row]];
+    NSString *row = [NSString stringWithFormat:@"%d",[singleton.produtos count]];
     [[cell textLabel] setText:row];
     [[cell detailTextLabel] setText:@"Detail"];
+    if([indexPath row]%2 == 0) cell.backgroundColor = [UIColor redColor];
+    else cell.backgroundColor = [UIColor blueColor];
     return cell;
 }
 
+//-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+//    return s;
+//}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return n;
+    return [singleton.produtos count];
 }
 
 -(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
