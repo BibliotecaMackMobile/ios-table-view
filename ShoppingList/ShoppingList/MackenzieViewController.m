@@ -8,6 +8,7 @@
 
 #import "MackenzieViewController.h"
 #import "MackenzieTableViewController.h"
+#import "MackenzieLista.h"
 
 @interface MackenzieViewController () {
     MackenzieTableViewController * childViewController;
@@ -30,6 +31,8 @@
 
 - (void)viewDidLoad
 {
+MackenzieLista * l = [MackenzieLista getInstance];
+[l criarLista];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
