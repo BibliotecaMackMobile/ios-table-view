@@ -19,9 +19,12 @@
 		27137CF818AB8303001BE8BE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27137CF718AB8303001BE8BE /* XCTest.framework */; };
 		27137CF918AB8303001BE8BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27137CD818AB8303001BE8BE /* Foundation.framework */; };
 		27137CFA18AB8303001BE8BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27137CDC18AB8303001BE8BE /* UIKit.framework */; };
-		27137D0218AB8303001BE8BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27137D0018AB8303001BE8BE /* InfoPlist.strings */; };
-		27137D0418AB8303001BE8BE /* ShoppingListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27137D0318AB8303001BE8BE /* ShoppingListTests.m */; };
 		27137D0F18AB9766001BE8BE /* MackenzieTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27137D0E18AB9766001BE8BE /* MackenzieTableViewController.m */; };
+		3D01CD9918B64CFD007E0D5F /* creme.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D01CD9818B64CFD007E0D5F /* creme.jpg */; };
+		3D01CD9B18B64EF9007E0D5F /* ovo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D01CD9A18B64EF9007E0D5F /* ovo.jpg */; };
+		3D236C0918B777E200B72CB1 /* SimpleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D236C0818B777E200B72CB1 /* SimpleTableCell.xib */; };
+		3D236C0F18B77C4800B72CB1 /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D236C0E18B77C4800B72CB1 /* SimpleTableCell.m */; };
+		3DA68C2F18B386370073F2E7 /* MackenzieSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA68C2E18B386370073F2E7 /* MackenzieSingleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,11 +54,15 @@
 		27137CF018AB8303001BE8BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		27137CF618AB8303001BE8BE /* ShoppingListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27137CF718AB8303001BE8BE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		27137CFF18AB8303001BE8BE /* ShoppingListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShoppingListTests-Info.plist"; sourceTree = "<group>"; };
-		27137D0118AB8303001BE8BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		27137D0318AB8303001BE8BE /* ShoppingListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingListTests.m; sourceTree = "<group>"; };
 		27137D0D18AB9766001BE8BE /* MackenzieTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MackenzieTableViewController.h; sourceTree = "<group>"; };
 		27137D0E18AB9766001BE8BE /* MackenzieTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MackenzieTableViewController.m; sourceTree = "<group>"; };
+		3D01CD9818B64CFD007E0D5F /* creme.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = creme.jpg; sourceTree = "<group>"; };
+		3D01CD9A18B64EF9007E0D5F /* ovo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ovo.jpg; sourceTree = "<group>"; };
+		3D236C0818B777E200B72CB1 /* SimpleTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleTableCell.xib; sourceTree = "<group>"; };
+		3D236C0D18B77C4800B72CB1 /* SimpleTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableCell.h; sourceTree = "<group>"; };
+		3D236C0E18B77C4800B72CB1 /* SimpleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCell.m; sourceTree = "<group>"; };
+		3DA68C2D18B386370073F2E7 /* MackenzieSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MackenzieSingleton.h; path = ../MackenzieSingleton.h; sourceTree = "<group>"; };
+		3DA68C2E18B386370073F2E7 /* MackenzieSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MackenzieSingleton.m; path = ../MackenzieSingleton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				27137CDE18AB8303001BE8BE /* ShoppingList */,
-				27137CFD18AB8303001BE8BE /* ShoppingListTests */,
 				27137CD718AB8303001BE8BE /* Frameworks */,
 				27137CD618AB8303001BE8BE /* Products */,
 			);
@@ -115,6 +121,10 @@
 		27137CDE18AB8303001BE8BE /* ShoppingList */ = {
 			isa = PBXGroup;
 			children = (
+				3D01CD9A18B64EF9007E0D5F /* ovo.jpg */,
+				3D01CD9818B64CFD007E0D5F /* creme.jpg */,
+				3DA68C2D18B386370073F2E7 /* MackenzieSingleton.h */,
+				3DA68C2E18B386370073F2E7 /* MackenzieSingleton.m */,
 				27137D0D18AB9766001BE8BE /* MackenzieTableViewController.h */,
 				27137D0E18AB9766001BE8BE /* MackenzieTableViewController.m */,
 				27137CE718AB8303001BE8BE /* MackenzieAppDelegate.h */,
@@ -124,6 +134,9 @@
 				27137CEE18AB8303001BE8BE /* MackenzieViewController.m */,
 				27137CF018AB8303001BE8BE /* Images.xcassets */,
 				27137CDF18AB8303001BE8BE /* Supporting Files */,
+				3D236C0818B777E200B72CB1 /* SimpleTableCell.xib */,
+				3D236C0D18B77C4800B72CB1 /* SimpleTableCell.h */,
+				3D236C0E18B77C4800B72CB1 /* SimpleTableCell.m */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
@@ -135,24 +148,6 @@
 				27137CE118AB8303001BE8BE /* InfoPlist.strings */,
 				27137CE418AB8303001BE8BE /* main.m */,
 				27137CE618AB8303001BE8BE /* ShoppingList-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		27137CFD18AB8303001BE8BE /* ShoppingListTests */ = {
-			isa = PBXGroup;
-			children = (
-				27137D0318AB8303001BE8BE /* ShoppingListTests.m */,
-				27137CFE18AB8303001BE8BE /* Supporting Files */,
-			);
-			path = ShoppingListTests;
-			sourceTree = "<group>";
-		};
-		27137CFE18AB8303001BE8BE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				27137CFF18AB8303001BE8BE /* ShoppingListTests-Info.plist */,
-				27137D0018AB8303001BE8BE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -234,8 +229,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D01CD9B18B64EF9007E0D5F /* ovo.jpg in Resources */,
+				3D01CD9918B64CFD007E0D5F /* creme.jpg in Resources */,
 				27137CF118AB8303001BE8BE /* Images.xcassets in Resources */,
 				27137CE318AB8303001BE8BE /* InfoPlist.strings in Resources */,
+				3D236C0918B777E200B72CB1 /* SimpleTableCell.xib in Resources */,
 				27137CEC18AB8303001BE8BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,7 +242,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27137D0218AB8303001BE8BE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +254,8 @@
 			files = (
 				27137CE918AB8303001BE8BE /* MackenzieAppDelegate.m in Sources */,
 				27137CEF18AB8303001BE8BE /* MackenzieViewController.m in Sources */,
+				3D236C0F18B77C4800B72CB1 /* SimpleTableCell.m in Sources */,
+				3DA68C2F18B386370073F2E7 /* MackenzieSingleton.m in Sources */,
 				27137CE518AB8303001BE8BE /* main.m in Sources */,
 				27137D0F18AB9766001BE8BE /* MackenzieTableViewController.m in Sources */,
 			);
@@ -266,7 +265,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27137D0418AB8303001BE8BE /* ShoppingListTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,14 +293,6 @@
 				27137CEB18AB8303001BE8BE /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		27137D0018AB8303001BE8BE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				27137D0118AB8303001BE8BE /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -467,6 +457,7 @@
 				27137D0918AB8303001BE8BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27137D0A18AB8303001BE8BE /* Build configuration list for PBXNativeTarget "ShoppingListTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +466,7 @@
 				27137D0C18AB8303001BE8BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
