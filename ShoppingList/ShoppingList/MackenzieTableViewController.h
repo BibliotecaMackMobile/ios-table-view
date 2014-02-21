@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Armazem.h"
+@class Produto;
 
-@interface MackenzieTableViewController : UITableViewController
+@interface MackenzieTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
+
+@property(strong,nonatomic) Armazem *armazem;
+@property(strong,nonatomic) Produto *produto;
 
 @end

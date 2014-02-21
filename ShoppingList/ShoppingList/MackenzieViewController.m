@@ -8,6 +8,7 @@
 
 #import "MackenzieViewController.h"
 #import "MackenzieTableViewController.h"
+#import "CadastraCellViewController.h"
 
 @interface MackenzieViewController () {
     MackenzieTableViewController * childViewController;
@@ -41,7 +42,17 @@
 }
 
 
+- (IBAction)novo:(id)sender {
+}
 
 
+-(void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    if ([identifier compare:@"novoRegistroSegue"] == NSOrderedSame) {
+        childViewController = (MackenzieTableViewController *) self.childViewControllers.lastObject;
+        Produto *novo = [(CadastraCellViewController*)sender novo];
+        
+    }
+}
 
 @end
