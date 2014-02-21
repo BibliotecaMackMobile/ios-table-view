@@ -9,6 +9,7 @@
 #import "MackenzieAddViewController.h"
 #import "MackenzieSingletonItem.h"
 #import "MackenzieViewController.h"
+#import "MackenzieTableViewController.h"
 
 @interface MackenzieAddViewController ()
 
@@ -16,15 +17,19 @@
 
 @implementation MackenzieAddViewController
 
+
+
 -(IBAction)efeitoBtnAdd:(id)sender {
-    MackenzieViewController *tela = [[MackenzieViewController alloc] init];
-    [[tela view] setBackgroundColor:[UIColor whiteColor]];
+   // [[tela view] setBackgroundColor:[UIColor whiteColor]];
     [[[MackenzieSingletonItem sharadeManager] itensListaDeCompras] addObject:[[self txtElemento] text]];
     int i = [[[MackenzieSingletonItem sharadeManager] itensListaDeCompras] indexOfObject:[[self txtElemento] text]];
     NSIndexPath *index = [NSIndexPath indexPathForRow:i inSection:0];
-    [[tela.childViewControllers lastObject] insertRowsAtIndexPaths:[NSArray arrayWithObject:index] withRowAnimation:UITableViewRowAnimationTop];
-    
-    [self presentViewController:tela animated:YES completion:nil];
+    MackenzieTableViewController *tela = (MackenzieTableViewController *)self.presentingViewController.childViewControllers.lastObject;
+    [(UITableView*)tela.view
+     insertRowsAtIndexPaths:[NSArray arrayWithObject:index] withRowAnimation:UITableViewRowAnimationTop];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    //[self presentViewController:tela animated:YES completion:nil];
+    //[tela viewDidLoad];
 }
 
 -(CGRect)makeRectWithX:(CGFloat)x andY:(CGFloat)y andLargura:(CGFloat)largura andAltura:(CGFloat)altura {

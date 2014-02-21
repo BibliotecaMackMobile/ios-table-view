@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MackenzieViewController.h"
 
 @interface MackenzieAddViewController : UIViewController <UITextFieldDelegate>
 
@@ -15,6 +16,7 @@
 @property (nonatomic, strong) UILabel *lblElemento;
 
 @property (nonatomic, strong) UIButton *btnAdd;
+
 
 -(CGRect)makeRectWithX:(CGFloat)x andY:(CGFloat)y andLargura:(CGFloat)largura andAltura:(CGFloat)altura;
 
