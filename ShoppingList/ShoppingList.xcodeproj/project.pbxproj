@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E5DBBBF18B780E300BD469D /* ListaProdutos.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5DBBBE18B780E300BD469D /* ListaProdutos.m */; };
+		1E5DBBC218B7851F00BD469D /* EditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5DBBC118B7851F00BD469D /* EditionViewController.m */; };
 		27137CD918AB8303001BE8BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27137CD818AB8303001BE8BE /* Foundation.framework */; };
 		27137CDB18AB8303001BE8BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27137CDA18AB8303001BE8BE /* CoreGraphics.framework */; };
 		27137CDD18AB8303001BE8BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27137CDC18AB8303001BE8BE /* UIKit.framework */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E5DBBBD18B780E300BD469D /* ListaProdutos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListaProdutos.h; path = ../ListaProdutos.h; sourceTree = "<group>"; };
+		1E5DBBBE18B780E300BD469D /* ListaProdutos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListaProdutos.m; path = ../ListaProdutos.m; sourceTree = "<group>"; };
+		1E5DBBC018B7851F00BD469D /* EditionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditionViewController.h; sourceTree = "<group>"; };
+		1E5DBBC118B7851F00BD469D /* EditionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditionViewController.m; sourceTree = "<group>"; };
 		27137CD518AB8303001BE8BE /* ShoppingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27137CD818AB8303001BE8BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27137CDA18AB8303001BE8BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,11 +121,15 @@
 		27137CDE18AB8303001BE8BE /* ShoppingList */ = {
 			isa = PBXGroup;
 			children = (
+				1E5DBBBD18B780E300BD469D /* ListaProdutos.h */,
+				1E5DBBBE18B780E300BD469D /* ListaProdutos.m */,
 				27137D0D18AB9766001BE8BE /* MackenzieTableViewController.h */,
 				27137D0E18AB9766001BE8BE /* MackenzieTableViewController.m */,
 				27137CE718AB8303001BE8BE /* MackenzieAppDelegate.h */,
 				27137CE818AB8303001BE8BE /* MackenzieAppDelegate.m */,
 				27137CEA18AB8303001BE8BE /* Main.storyboard */,
+				1E5DBBC018B7851F00BD469D /* EditionViewController.h */,
+				1E5DBBC118B7851F00BD469D /* EditionViewController.m */,
 				27137CED18AB8303001BE8BE /* MackenzieViewController.h */,
 				27137CEE18AB8303001BE8BE /* MackenzieViewController.m */,
 				27137CF018AB8303001BE8BE /* Images.xcassets */,
@@ -255,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E5DBBBF18B780E300BD469D /* ListaProdutos.m in Sources */,
+				1E5DBBC218B7851F00BD469D /* EditionViewController.m in Sources */,
 				27137CE918AB8303001BE8BE /* MackenzieAppDelegate.m in Sources */,
 				27137CEF18AB8303001BE8BE /* MackenzieViewController.m in Sources */,
 				27137CE518AB8303001BE8BE /* main.m in Sources */,
@@ -467,6 +479,7 @@
 				27137D0918AB8303001BE8BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27137D0A18AB8303001BE8BE /* Build configuration list for PBXNativeTarget "ShoppingListTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +488,7 @@
 				27137D0C18AB8303001BE8BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

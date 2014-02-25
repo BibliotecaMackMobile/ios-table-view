@@ -9,27 +9,50 @@
 #import "MackenzieTableViewController.h"
 
 @implementation MackenzieTableViewController{
-    int n;
+    
+
+}
+
+
+-(void)viewDidLoad {
+    
+    [super viewDidLoad];
+
+    
+    
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:YES];
+    [self.tableView reloadData];
+
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
-    n = 10;
+    lista = [ListaProdutos sharedInstance];
     return [self init];
+    
+   
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    // Get the data from the database and fill the cell
-    NSString *row = [NSString stringWithFormat:@"%d",[indexPath row]];
-    [[cell textLabel] setText:row];
+
+
+    NSUInteger linha = indexPath.row;
+    [[cell textLabel] setText:[lista.produtos objectAtIndex:linha]];
     [[cell detailTextLabel] setText:@"Detail"];
+   
     return cell;
+    
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return n;
+    return lista.produtos.count;
 }
 
 -(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -37,12 +60,15 @@
     NSLog(@"Editing %d",n);
     if(editingStyle == UITableViewCellEditingStyleDelete)
     {
-        // codigo de remocao do item que esta na posicao [indexPath row] no backend
-        // e remocao no front-end
-        n = n -1;
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [lista.produtos removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
     }
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath  {
+    
+    
 }
 
 

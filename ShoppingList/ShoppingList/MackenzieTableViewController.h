@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ListaProdutos.h"
 
 @interface MackenzieTableViewController : UITableViewController
-
+{
+    ListaProdutos * lista;
+    int n;
+}
 @end
