@@ -14,6 +14,9 @@
 
 @interface LetterViewController : UIViewController
 
+
+@property (nonatomic, strong) LetterViewController* view1;
+
 @property (nonatomic, retain) UIImageView* imageView;
 
 @property (strong, nonatomic) AVSpeechSynthesizer* synthesizer;

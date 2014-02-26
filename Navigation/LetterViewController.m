@@ -16,6 +16,7 @@
 @implementation LetterViewController
 @synthesize synthesizer;
 @synthesize utterance;
+@synthesize view1;
 static int vari = 0;
 static char ref;
 static char ref2;
@@ -37,42 +38,68 @@ static char ref2;
                              initWithBarButtonSystemItem:UIBarButtonSystemItemFastForward target:self action:@selector(next:)];
     self.navigationItem.rightBarButtonItem=next;
     
-    UIButton *botao = [UIButton
-                       buttonWithType:UIButtonTypeSystem];
-    [botao addTarget:self action:@selector(sound:) forControlEvents:UIControlEventTouchUpInside];
-    [botao sizeToFit];
-    [botao setBackgroundImage:[let img] forState:UIControlStateNormal];
-    botao.center = self.view.center;
+    UIBarButtonItem *prev = [[UIBarButtonItem alloc]
+                             initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(previus:)];
+    self.navigationItem.leftBarButtonItem=prev;
+
+    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self action:@selector(handleImageTap:)];
+    tgr.delegate = self;
+    [self.view addGestureRecognizer:tgr];
     
     UILabel* text = [UILabel new];
     [text setText:let.word ];
     [text sizeToFit];
-    //CGRect frame = [self.view frame];
-    //CGPoint bottom = CGPoint
     text.center = CGPointMake(160, 460);
     [self.view addSubview:text];
+    _imageView = [[UIImageView alloc]initWithFrame:CGRectMake(30, 120, 260, 310)];
+    [_imageView setImage:[let img]];
+    [[self view] addSubview:_imageView];
+}
+
+-(IBAction)handleImageTap:(id)sender{
+    Singleton* sing = [Singleton instanciar];
+    Letter* let = [Letter new];
+    let = [[sing array]objectAtIndex:vari];
     
-//    _imageView = [[UIImageView alloc]initWithFrame:CGRectMake(30, 300, 260, 310)];
-//    [_imageView setImage:[let img]];
-//    [[self view] addSubview:_imageView];
-    
-    
-    [self.view addSubview:botao];
-    
+    utterance = [AVSpeechUtterance speechUtteranceWithString:let.word];
+    utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
+    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"ja-JP"];
+    [synthesizer speakUtterance:utterance];
 }
 
 -(void)next:(id)sender {
-    LetterViewController *proximo = [[LetterViewController alloc]
+    
+    if (!view1 ) {
+        view1 = [[LetterViewController alloc]
                                      initWithNibName:nil
                                      bundle:NULL];
-    [self.navigationController pushViewController:proximo
+    }
+    
+
+    [self.navigationController pushViewController:view1
                                          animated:YES];
+
     
     
         if (ref == 'Z')
             vari = 0;
         else
             vari++;
+}
+
+-(void)previus:(id)sender {
+    view1 = [[LetterViewController alloc]
+             initWithNibName:nil
+             bundle:NULL];
+    
+    if (ref == 'A')
+        return;
+    else
+        vari--;
+    
+    [self.navigationController pushViewController:view1
+                                         animated:YES];
     
     
 }
