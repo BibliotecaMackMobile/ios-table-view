@@ -195,6 +195,7 @@ static Singleton* instancia = nil;
             if (cha == 'Q' || cha == 'V' || cha == 'X') {
                 
             }else{
+                //else
             [object setLetter:cha];
             [array addObject:object];
             }
