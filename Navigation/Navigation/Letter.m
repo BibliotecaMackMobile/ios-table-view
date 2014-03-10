@@ -13,16 +13,6 @@
 
 @synthesize word;
 @synthesize letter;
+@synthesize english;
 
--(void)alfabeto{
-    Singleton* mut = [Singleton instanciar];
-    
-    for(char cha = 'A'; cha <= 'Z'; cha++){
-        Letter* object = [Letter new];
-        [object setLetter:cha];
-        [mut addLetter:object];
-    }
-    
-    
-}
 @end

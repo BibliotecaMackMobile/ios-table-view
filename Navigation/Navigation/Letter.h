@@ -11,6 +11,7 @@
 @interface Letter : NSObject
 
 @property NSString* word;
+@property NSString* english;
 @property char letter;
 @property UIImage* img;
 

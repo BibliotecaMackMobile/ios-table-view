@@ -38,67 +38,79 @@ static Singleton* instancia = nil;
             if (cha == 'A') {
                 //Baby
                 [object setWord:@"Akachan"];
+                [object setEnglish:@"Baby"];
                 [object setImg:[UIImage imageNamed:@"akachan.jpg"]];
 
             }
             if (cha == 'B') {
                 //Cazuza
-                [object setWord:@"Baka"];
-                object.img = [UIImage imageNamed:@"baka.jpg"];
+                [object setWord:@"Buta"];
+                [object setEnglish:@"Pig"];
+                object.img = [UIImage imageNamed:@"Buta.png"];
             }
             if (cha == 'C') {
                 //Word
                 [object setWord:@"Chikyuu"];
+                [object setEnglish:@"Earth"];
                 object.img = [UIImage imageNamed:@"chikyuu.png"];
             }
             if (cha == 'D') {
                 //phone
                 [object setWord:@"Denwa"];
+                [object setEnglish:@"telephone"];
                 object.img = [UIImage imageNamed:@"denwa.png"];
             }
             if (cha == 'E') {
                 //Rodrigo
-                [object setWord:@"Ecchi"];
-                object.img = [UIImage imageNamed:@"ecchi.jpg"];
+                [object setWord:@"Enpitsu"];
+                [object setEnglish:@"Pencil"];
+                object.img = [UIImage imageNamed:@"Enpitsu.png"];
             }
             if (cha == 'F') {
                 //Owl
                 [object setWord:@"Fukurou "];
+                [object setEnglish:@"Owl"];
                 object.img = [UIImage imageNamed:@"fukurou.jpg"];
             }
             if (cha == 'G') {
                 //Sky
                 [object setWord:@"Goten"];
+                [object setEnglish:@"Sky"];
                 object.img = [UIImage imageNamed:@"goten.JPG"];
 
             }
             if (cha == 'H') {
                 //Flower
                 [object setWord:@"Hana"];
+                [object setEnglish:@"Flower"];
                 object.img = [UIImage imageNamed:@"hana.jpeg"];
 
             }
             if (cha == 'I') {
                 //Dog
                 [object setWord:@"Inu"];
+                [object setEnglish:@"Dog"];
                 object.img = [UIImage imageNamed:@"inu.jpeg"];
 
             }
             if (cha == 'J') {
                 //Home
                 [object setWord:@"Jinka"];
+                [object setEnglish:@"Home"];
                 object.img = [UIImage imageNamed:@"jinka.png"];
 
             }
             if (cha == 'K') {
                 //Perfect
-                [object setWord:@"Kanpeki"];
-                object.img = [UIImage imageNamed:@"kanpeki.jpg"];
+                [object setWord:@"Kagi"];
+                [object setEnglish:@"Key"];
+                object.img = [UIImage imageNamed:@"Kagi.png"];
 
             }
             if (cha == 'L') {
                 //Lamen
                 [object setWord:@"Lamen"];
+                [object setEnglish:@"Lamen"];
                 object.img = [UIImage imageNamed:@"lamen.jpeg"];
 
                 
@@ -106,88 +118,86 @@ static Singleton* instancia = nil;
             if (cha == 'M') {
                 //Ear
                 [object setWord:@"Mimi"];
+                [object setEnglish:@"Ear"];
                 object.img = [UIImage imageNamed:@"mimi.jpeg"];
 
             }
             if (cha == 'N') {
                 //Cat
                 [object setWord:@"Neko"];
-                object.img = [UIImage imageNamed:@"neko.jpg"];
+                [object setEnglish:@"Cat"];
+                object.img = [UIImage imageNamed:@"Neko1.png"];
 
             }
             if (cha == 'O') {
                 //ghost
                 [object setWord:@"Obake"];
+                [object setEnglish:@"Ghost"];
                 object.img = [UIImage imageNamed:@"obake.png"];
 
             }
             if (cha == 'P') {
                 //Bread
                 [object setWord:@"Pan"];
+                [object setEnglish:@"Bread"];
                 object.img = [UIImage imageNamed:@"pan.png"];
-
-            }
-            if (cha == 'Q') {
-                //Sakura
-                [object setWord:@"Quero"];
-                object.img = [UIImage imageNamed:@"quero.jpg"];
 
             }
             if (cha == 'R') {
                 //camelo
                 [object setWord:@"Rakuda"];
+                [object setEnglish:@"Camel"];
                 object.img = [UIImage imageNamed:@"rakuda.jpg"];
 
             }
             if (cha == 'S') {
                 //Monkey
                 [object setWord:@"Saru"];
+                [object setEnglish:@"Monkey"];
                 object.img = [UIImage imageNamed:@"saru.jpg"];
 
             }
             if (cha == 'T') {
                 //Sun
                 [object setWord:@"Taiyou"];
+                [object setEnglish:@"Sun"];
                 object.img = [UIImage imageNamed:@"taiyou.jpg"];
 
             }
             if (cha == 'U') {
                 //Cavalo
                 [object setWord:@"Uma"];
-                object.img = [UIImage imageNamed:@"uma.png"];
-
-            }
-            if (cha == 'V') {
-                [object setWord:@"Vilma"];
-                object.img = [UIImage imageNamed:@"vilma.jpg"];
+                [object setEnglish:@"Horse"];
+                object.img = [UIImage imageNamed:@"Uma1.png"];
 
             }
             if (cha == 'W') {
                 //Eagle
                 [object setWord:@"Washi"];
+                [object setEnglish:@"Eagle"];
                 object.img = [UIImage imageNamed:@"washi.jpg"];
-
-            }
-            if (cha == 'X') {
-                [object setWord:@"xicara"];
-                object.img = [UIImage imageNamed:@"xicara.png"];
 
             }
             if (cha == 'Y') {
                 //Amora
                 [object setWord:@"Yamaguwa"];
+                [object setEnglish:@"Blackberry"];
                 object.img = [UIImage imageNamed:@"yamaguwa.jpg"];
 
             }
             if (cha == 'Z') {
                 //skull
                 [object setWord:@"Zukotsu"];
+                [object setEnglish:@"Skull"];
                 object.img = [UIImage imageNamed:@"zukotsu.jpg"];
 
             }
-
+            if (cha == 'Q' || cha == 'V' || cha == 'X') {
+                
+            }else{
             [object setLetter:cha];
             [array addObject:object];
+            }
         }
     }
     return self;

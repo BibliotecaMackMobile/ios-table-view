@@ -24,8 +24,6 @@
 		AE6004E418BB721500A28B0F /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6004E318BB721500A28B0F /* Singleton.m */; };
 		AE6004E618BCDD6400A28B0F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6004E518BCDD6400A28B0F /* AudioToolbox.framework */; };
 		AE6004E818BCDD7300A28B0F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6004E718BCDD7300A28B0F /* AVFoundation.framework */; };
-		AE6004EB18BCE53800A28B0F /* baka.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE6004EA18BCE53800A28B0F /* baka.jpg */; };
-		AE6004ED18BCE58400A28B0F /* ecchi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE6004EC18BCE58400A28B0F /* ecchi.jpg */; };
 		AE9A247818BD2B4500861A9A /* akachan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9A246718BD2B4500861A9A /* akachan.jpg */; };
 		AE9A247918BD2B4500861A9A /* chikyuu.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9A246818BD2B4500861A9A /* chikyuu.png */; };
 		AE9A247A18BD2B4500861A9A /* denwa.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9A246918BD2B4500861A9A /* denwa.png */; };
@@ -37,19 +35,20 @@
 		AE9A248018BD2B4500861A9A /* kanpeki.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9A246F18BD2B4500861A9A /* kanpeki.jpg */; };
 		AE9A248118BD2B4500861A9A /* lamen.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AE9A247018BD2B4500861A9A /* lamen.jpeg */; };
 		AE9A248218BD2B4500861A9A /* mimi.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AE9A247118BD2B4500861A9A /* mimi.jpeg */; };
-		AE9A248318BD2B4500861A9A /* neko.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9A247218BD2B4500861A9A /* neko.jpg */; };
 		AE9A248418BD2B4500861A9A /* obake.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9A247318BD2B4500861A9A /* obake.png */; };
 		AE9A248518BD2B4500861A9A /* pan.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9A247418BD2B4500861A9A /* pan.png */; };
 		AE9A248618BD2B4500861A9A /* quero.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9A247518BD2B4500861A9A /* quero.jpg */; };
 		AE9A248718BD2B4500861A9A /* rakuda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9A247618BD2B4500861A9A /* rakuda.jpg */; };
 		AE9A248818BD2B4500861A9A /* saru.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9A247718BD2B4500861A9A /* saru.jpg */; };
 		AE9A248F18BD2EAD00861A9A /* taiyou.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9A248918BD2EAD00861A9A /* taiyou.jpg */; };
-		AE9A249018BD2EAD00861A9A /* uma.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9A248A18BD2EAD00861A9A /* uma.png */; };
-		AE9A249118BD2EAD00861A9A /* vilma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9A248B18BD2EAD00861A9A /* vilma.jpg */; };
-		AE9A249218BD2EAD00861A9A /* xicara.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9A248C18BD2EAD00861A9A /* xicara.png */; };
 		AE9A249318BD2EAD00861A9A /* yamaguwa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9A248D18BD2EAD00861A9A /* yamaguwa.jpg */; };
 		AE9A249718BE1BA700861A9A /* washi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9A249518BE1BA700861A9A /* washi.jpg */; };
 		AE9A249818BE1BA700861A9A /* zukotsu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9A249618BE1BA700861A9A /* zukotsu.jpg */; };
+		AEC6281518C0AF5300CF20C7 /* Neko1.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC6281318C0AF5300CF20C7 /* Neko1.png */; };
+		AEC6281618C0AF5300CF20C7 /* Uma1.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC6281418C0AF5300CF20C7 /* Uma1.png */; };
+		AEC6281A18C0AFF800CF20C7 /* Buta.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC6281718C0AFF800CF20C7 /* Buta.png */; };
+		AEC6281B18C0AFF800CF20C7 /* Enpitsu.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC6281818C0AFF800CF20C7 /* Enpitsu.png */; };
+		AEC6281C18C0AFF800CF20C7 /* Kagi.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC6281918C0AFF800CF20C7 /* Kagi.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,8 +86,6 @@
 		AE6004E318BB721500A28B0F /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 		AE6004E518BCDD6400A28B0F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		AE6004E718BCDD7300A28B0F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		AE6004EA18BCE53800A28B0F /* baka.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = baka.jpg; sourceTree = "<group>"; };
-		AE6004EC18BCE58400A28B0F /* ecchi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ecchi.jpg; sourceTree = "<group>"; };
 		AE9A246718BD2B4500861A9A /* akachan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = akachan.jpg; sourceTree = "<group>"; };
 		AE9A246818BD2B4500861A9A /* chikyuu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chikyuu.png; sourceTree = "<group>"; };
 		AE9A246918BD2B4500861A9A /* denwa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = denwa.png; sourceTree = "<group>"; };
@@ -100,19 +97,20 @@
 		AE9A246F18BD2B4500861A9A /* kanpeki.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kanpeki.jpg; sourceTree = "<group>"; };
 		AE9A247018BD2B4500861A9A /* lamen.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lamen.jpeg; sourceTree = "<group>"; };
 		AE9A247118BD2B4500861A9A /* mimi.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mimi.jpeg; sourceTree = "<group>"; };
-		AE9A247218BD2B4500861A9A /* neko.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = neko.jpg; sourceTree = "<group>"; };
 		AE9A247318BD2B4500861A9A /* obake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = obake.png; sourceTree = "<group>"; };
 		AE9A247418BD2B4500861A9A /* pan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pan.png; sourceTree = "<group>"; };
 		AE9A247518BD2B4500861A9A /* quero.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = quero.jpg; sourceTree = "<group>"; };
 		AE9A247618BD2B4500861A9A /* rakuda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rakuda.jpg; sourceTree = "<group>"; };
 		AE9A247718BD2B4500861A9A /* saru.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = saru.jpg; sourceTree = "<group>"; };
 		AE9A248918BD2EAD00861A9A /* taiyou.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = taiyou.jpg; sourceTree = "<group>"; };
-		AE9A248A18BD2EAD00861A9A /* uma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uma.png; sourceTree = "<group>"; };
-		AE9A248B18BD2EAD00861A9A /* vilma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vilma.jpg; sourceTree = "<group>"; };
-		AE9A248C18BD2EAD00861A9A /* xicara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xicara.png; sourceTree = "<group>"; };
 		AE9A248D18BD2EAD00861A9A /* yamaguwa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yamaguwa.jpg; sourceTree = "<group>"; };
 		AE9A249518BE1BA700861A9A /* washi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = washi.jpg; sourceTree = "<group>"; };
 		AE9A249618BE1BA700861A9A /* zukotsu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zukotsu.jpg; sourceTree = "<group>"; };
+		AEC6281318C0AF5300CF20C7 /* Neko1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neko1.png; sourceTree = "<group>"; };
+		AEC6281418C0AF5300CF20C7 /* Uma1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Uma1.png; sourceTree = "<group>"; };
+		AEC6281718C0AFF800CF20C7 /* Buta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Buta.png; sourceTree = "<group>"; };
+		AEC6281818C0AFF800CF20C7 /* Enpitsu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Enpitsu.png; sourceTree = "<group>"; };
+		AEC6281918C0AFF800CF20C7 /* Kagi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Kagi.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,11 +221,14 @@
 		AE6004E918BCE4EA00A28B0F /* img */ = {
 			isa = PBXGroup;
 			children = (
+				AEC6281718C0AFF800CF20C7 /* Buta.png */,
+				AEC6281818C0AFF800CF20C7 /* Enpitsu.png */,
+				AEC6281918C0AFF800CF20C7 /* Kagi.png */,
+				AEC6281318C0AF5300CF20C7 /* Neko1.png */,
+				AEC6281418C0AF5300CF20C7 /* Uma1.png */,
 				AE9A246718BD2B4500861A9A /* akachan.jpg */,
-				AE6004EA18BCE53800A28B0F /* baka.jpg */,
 				AE9A246818BD2B4500861A9A /* chikyuu.png */,
 				AE9A246918BD2B4500861A9A /* denwa.png */,
-				AE6004EC18BCE58400A28B0F /* ecchi.jpg */,
 				AE9A246A18BD2B4500861A9A /* fukurou.jpg */,
 				AE9A246B18BD2B4500861A9A /* goten.JPG */,
 				AE9A246C18BD2B4500861A9A /* hana.jpeg */,
@@ -236,17 +237,13 @@
 				AE9A246F18BD2B4500861A9A /* kanpeki.jpg */,
 				AE9A247018BD2B4500861A9A /* lamen.jpeg */,
 				AE9A247118BD2B4500861A9A /* mimi.jpeg */,
-				AE9A247218BD2B4500861A9A /* neko.jpg */,
 				AE9A247318BD2B4500861A9A /* obake.png */,
 				AE9A247418BD2B4500861A9A /* pan.png */,
 				AE9A247518BD2B4500861A9A /* quero.jpg */,
 				AE9A247618BD2B4500861A9A /* rakuda.jpg */,
 				AE9A247718BD2B4500861A9A /* saru.jpg */,
 				AE9A248918BD2EAD00861A9A /* taiyou.jpg */,
-				AE9A248A18BD2EAD00861A9A /* uma.png */,
-				AE9A248B18BD2EAD00861A9A /* vilma.jpg */,
 				AE9A249518BE1BA700861A9A /* washi.jpg */,
-				AE9A248C18BD2EAD00861A9A /* xicara.png */,
 				AE9A248D18BD2EAD00861A9A /* yamaguwa.jpg */,
 				AE9A249618BE1BA700861A9A /* zukotsu.jpg */,
 			);
@@ -329,29 +326,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC6281C18C0AFF800CF20C7 /* Kagi.png in Resources */,
 				AE9A248418BD2B4500861A9A /* obake.png in Resources */,
-				AE9A249118BD2EAD00861A9A /* vilma.jpg in Resources */,
-				AE6004ED18BCE58400A28B0F /* ecchi.jpg in Resources */,
 				AE9A248F18BD2EAD00861A9A /* taiyou.jpg in Resources */,
 				AE9A247818BD2B4500861A9A /* akachan.jpg in Resources */,
 				AE9A248518BD2B4500861A9A /* pan.png in Resources */,
 				AE9A248218BD2B4500861A9A /* mimi.jpeg in Resources */,
 				AE9A248718BD2B4500861A9A /* rakuda.jpg in Resources */,
-				AE9A249218BD2EAD00861A9A /* xicara.png in Resources */,
 				AE9A247918BD2B4500861A9A /* chikyuu.png in Resources */,
-				AE9A248318BD2B4500861A9A /* neko.jpg in Resources */,
+				AEC6281A18C0AFF800CF20C7 /* Buta.png in Resources */,
 				AE9A248118BD2B4500861A9A /* lamen.jpeg in Resources */,
 				AE9A247C18BD2B4500861A9A /* goten.JPG in Resources */,
 				AE9A249318BD2EAD00861A9A /* yamaguwa.jpg in Resources */,
 				AE9A249818BE1BA700861A9A /* zukotsu.jpg in Resources */,
 				AE9A248818BD2B4500861A9A /* saru.jpg in Resources */,
 				AE9A247E18BD2B4500861A9A /* inu.jpeg in Resources */,
+				AEC6281B18C0AFF800CF20C7 /* Enpitsu.png in Resources */,
 				AE9A248018BD2B4500861A9A /* kanpeki.jpg in Resources */,
 				AE9A247B18BD2B4500861A9A /* fukurou.jpg in Resources */,
+				AEC6281618C0AF5300CF20C7 /* Uma1.png in Resources */,
 				AE9A248618BD2B4500861A9A /* quero.jpg in Resources */,
+				AEC6281518C0AF5300CF20C7 /* Neko1.png in Resources */,
 				27156F5718B76AF50053A99C /* InfoPlist.strings in Resources */,
-				AE6004EB18BCE53800A28B0F /* baka.jpg in Resources */,
-				AE9A249018BD2EAD00861A9A /* uma.png in Resources */,
 				AE9A247A18BD2B4500861A9A /* denwa.png in Resources */,
 				AE9A249718BE1BA700861A9A /* washi.jpg in Resources */,
 				AE9A247F18BD2B4500861A9A /* jinka.png in Resources */,

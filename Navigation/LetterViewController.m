@@ -25,7 +25,7 @@ static char ref2;
 {
 	[super viewDidLoad];
     synthesizer = [AVSpeechSynthesizer new];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     
     Singleton* sing = [Singleton instanciar];
     Letter* let = [Letter new];
@@ -47,11 +47,19 @@ static char ref2;
     tgr.delegate = self;
     [self.view addGestureRecognizer:tgr];
     
+    UIButton* english = [UIButton buttonWithType:UIButtonTypeSystem];
+    [english addTarget:self action:@selector(soundEnglish:) forControlEvents:UIControlEventTouchUpInside];
+    [english setTitle:@"English" forState:UIControlStateNormal];
+    [english sizeToFit];
+    english.center = CGPointMake(270, 540);
+    [self.view addSubview:english];
+    
     UILabel* text = [UILabel new];
     [text setText:let.word ];
     [text sizeToFit];
     text.center = CGPointMake(160, 460);
     [self.view addSubview:text];
+    
     _imageView = [[UIImageView alloc]initWithFrame:CGRectMake(30, 120, 260, 310)];
     [_imageView setImage:[let img]];
     [[self view] addSubview:_imageView];
@@ -70,18 +78,10 @@ static char ref2;
 
 -(void)next:(id)sender {
     
-    if (!view1 ) {
-        view1 = [[LetterViewController alloc]
-                                     initWithNibName:nil
-                                     bundle:NULL];
-    }
+    if (!view1 )
+        view1 = [[LetterViewController alloc]initWithNibName:nil bundle:NULL];
     
-
-    [self.navigationController pushViewController:view1
-                                         animated:YES];
-
-    
-    
+    [self.navigationController pushViewController:view1 animated:YES];
         if (ref == 'Z')
             vari = 0;
         else
@@ -93,15 +93,12 @@ static char ref2;
              initWithNibName:nil
              bundle:NULL];
     
-    if (ref == 'A')
+    if (!vari)
         return;
     else
         vari--;
     
-    [self.navigationController pushViewController:view1
-                                         animated:YES];
-    
-    
+    [self.navigationController pushViewController:view1 animated:YES];
 }
 
 -(void)sound:(id)sender{
@@ -112,6 +109,18 @@ static char ref2;
     utterance = [AVSpeechUtterance speechUtteranceWithString:let.word];
     utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
     utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"ja-JP"];
+    [synthesizer speakUtterance:utterance];
+    
+}
+
+-(void)soundEnglish:(id)sender{
+    Singleton* sing = [Singleton instanciar];
+    Letter* let = [Letter new];
+    let = [[sing array]objectAtIndex:vari];
+    
+    utterance = [AVSpeechUtterance speechUtteranceWithString:let.english];
+    utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
+    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:[AVSpeechSynthesisVoice currentLanguageCode]];
     [synthesizer speakUtterance:utterance];
     
 }
